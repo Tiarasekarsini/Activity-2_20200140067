@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html> 
+    <head>
+        <title>Faktur</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table border="1">
+            <caption>Order Details</caption>
+            <tr>
+                <th rowspan="2" bgcolor="#00ff80">Name of Vegetables</th>
+                <th colspan="10" bgcolor="#00ff80">Calculating</th> 
+     
+            </tr>
+            <tr>
+                <th>Qty</th>
+                <th>Price perKg</th>
+                <th>Initial payment amount</th>
+                <th>Discount Amount</th>
+            </tr>
+            <tr>
+                <td th:text="${namasayur}" ></td>
+                <td th:text="${Jumlah}" ></td>
+                <td th:text="${harga}" ></td>
+                <td th:text="${jumlahawal}" ></td>
+                <td th:text="${diskon}"></td>
+            </tr>      
+            <tr>
+                <th rowspan="2" bgcolor="yellow">Total Discounted Price</th>
+            </tr>
+            <tr>
+                <th colspan="10" bgcolor="yellow" th:text="${totalpotongan}"></th>
+            </tr>
+            <tr>
+                <th rowspan="2" bgcolor="yellow"> Total Price to be paid</th>
+            </tr>
+            <tr>
+                <th colspan="10" th:text="${totalbayar}"></th>
+            </tr>
+            <tr>
+                <th rowspan="2" bgcolor="yellow"> Money Given by Customer </th>
+            </tr>
+            <tr>
+                <th colspan="10" th:text="${UangMasuk}"></th>
+            </tr>
+            <tr>
+                <th rowspan="2" bgcolor="yellow">Information</th>
+            </tr>
+            <tr>
+                <th colspan="10" bgcolor="yellow" th:text="${Kembalian}"></th>
+            </tr> 
+        <hr>
+    </body>
+</html>
